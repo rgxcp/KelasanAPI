@@ -2,7 +2,7 @@
 
 const Schema = use('Schema');
 
-class UsersSchema extends Schema {
+class UserSchema extends Schema {
   up() {
     this.create('users', (table) => {
       table.increments('id');
@@ -25,4 +25,4 @@ class UsersSchema extends Schema {
   }
 }
 
-module.exports = UsersSchema;
+module.exports = UserSchema;
