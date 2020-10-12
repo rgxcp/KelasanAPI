@@ -3,7 +3,7 @@
 class SignUp {
   get rules() {
     return {
-      username: 'required|min:5|max:20',
+      username: 'required|min:5|max:20|unique:users,username',
       password: 'required|min:8|different:username'
     };
   }
