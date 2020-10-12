@@ -1,11 +1,16 @@
-'use strict'
+'use strict';
 
-class User {
-  get rules () {
+class SignUp {
+  get rules() {
     return {
-      // validation rules
-    }
+      username: 'required|min:5|max:20',
+      password: 'required|min:8|different:username'
+    };
+  }
+
+  get validateAll() {
+    return true;
   }
 }
 
-module.exports = User
+module.exports = SignUp;
