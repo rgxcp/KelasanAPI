@@ -18,5 +18,5 @@ const Route = use('Route');
 // Version 1
 Route.group(() => {
   // User
-  Route.post('signup', 'UserController.signUp');
+  Route.post('signup', 'UserController.signUp').validator('SignUp');
 }).prefix('api/v1');
