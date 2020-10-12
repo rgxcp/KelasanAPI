@@ -16,7 +16,8 @@ class UserSchema extends Schema {
         .notNullable()
         .collate('utf8mb4_unicode_ci');
       table.string('password', 60).notNullable().collate('utf8mb4_unicode_ci');
-      table.timestamps();
+      table.timestamp('created_at').nullable();
+      table.timestamp('updated_at').nullable();
     });
   }
 
