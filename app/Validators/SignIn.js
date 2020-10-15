@@ -1,16 +1,16 @@
-'use strict';
+'use strict'
 
 class SignIn {
   get rules() {
     return {
       username: 'required',
       password: 'required'
-    };
+    }
   }
 
   get validateAll() {
-    return true;
+    return true
   }
 }
 
-module.exports = SignIn;
+module.exports = SignIn

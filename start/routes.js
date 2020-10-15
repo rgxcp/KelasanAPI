@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +13,11 @@
 |
 */
 
-const Route = use('Route');
+const Route = use('Route')
 
 // Version 1
 Route.group(() => {
   // User
-  Route.post('signup', 'UserController.signUp').validator('SignUp');
-  Route.post('signin', 'UserController.signIn').validator('SignIn');
-}).prefix('api/v1');
+  Route.post('signup', 'UserController.signUp').validator('SignUp')
+  Route.post('signin', 'UserController.signIn').validator('SignIn')
+}).prefix('api/v1')
