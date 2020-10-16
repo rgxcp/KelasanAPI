@@ -19,6 +19,12 @@ class UserController {
 
     return user
   }
+
+  async signIn({ request, auth }) {
+    const { email, password } = await request.post()
+
+    return await auth.attempt(email, password)
+  }
 }
 
 module.exports = UserController
