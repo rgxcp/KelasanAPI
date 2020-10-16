@@ -24,6 +24,10 @@ class UserController {
 
     return await auth.revokeTokens(token)
   }
+
+  async signOutAll({ auth }) {
+    return await auth.revokeTokens()
+  }
 }
 
 module.exports = UserController
