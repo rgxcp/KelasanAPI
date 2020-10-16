@@ -18,8 +18,8 @@ const Route = use('Route')
 // Version 1
 Route.group(() => {
   // User
-  Route.post('signup', 'UserController.signUp').validator('SignUp')
-  Route.post('signin', 'UserController.signIn').validator('SignIn')
-  Route.delete('signout', 'UserController.signOut').middleware('auth')
-  Route.delete('signout-all', 'UserController.signOutAll').middleware('auth')
+  Route.post('sign-up', 'UserController.signUp').validator('SignUp')
+  Route.post('sign-in', 'UserController.signIn').validator('SignIn')
+  Route.delete('sign-out', 'UserController.signOut').middleware('auth')
+  Route.delete('sign-out-all', 'UserController.signOutAll').middleware('auth')
 }).prefix('api/v1')
