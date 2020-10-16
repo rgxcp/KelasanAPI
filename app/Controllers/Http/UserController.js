@@ -18,6 +18,12 @@ class UserController {
 
     return await auth.attempt(email, password)
   }
+
+  async signOut({ auth }) {
+    const token = await auth.getAuthHeader()
+
+    return await auth.revokeTokens(token)
+  }
 }
 
 module.exports = UserController
