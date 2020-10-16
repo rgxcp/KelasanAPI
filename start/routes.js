@@ -20,4 +20,5 @@ Route.group(() => {
   // User
   Route.post('signup', 'UserController.signUp').validator('SignUp')
   Route.post('signin', 'UserController.signIn').validator('SignIn')
+  Route.delete('signout', 'UserController.signOut').middleware('auth')
 }).prefix('api/v1')
