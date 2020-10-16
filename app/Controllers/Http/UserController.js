@@ -1,13 +1,11 @@
 'use strict'
 
-const Hash = use('Hash')
 const Token = use('App/Models/Token')
 const User = use('App/Models/User')
 
 class UserController {
   async signUp({ request, auth }) {
     const data = request.post()
-    data.password = await Hash.make(data.password)
     data.profile_picture = `https://ui-avatars.com/api/?name=${data.email}`
 
     const user = await User.create(data)
