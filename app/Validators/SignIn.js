@@ -3,7 +3,7 @@
 class SignIn {
   get rules() {
     return {
-      username: 'required',
+      email: 'required|email',
       password: 'required'
     }
   }
