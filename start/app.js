@@ -42,7 +42,9 @@ const aceProviders = ['@adonisjs/lucid/providers/MigrationsProvider']
 |   { Route: 'Adonis/Src/Route' }
 |
 */
-const aliases = {}
+const aliases = {
+  User: 'App/Models/User'
+}
 
 /*
 |--------------------------------------------------------------------------

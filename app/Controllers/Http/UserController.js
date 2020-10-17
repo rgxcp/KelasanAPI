@@ -1,6 +1,6 @@
 'use strict'
 
-const User = use('App/Models/User')
+const User = use('User')
 
 class UserController {
   async signUp({ request, auth }) {
