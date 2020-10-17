@@ -1,28 +1,19 @@
-# Adonis API application
+# JavaScript - Adonis.js - Kelasan API
+**EN**: API for managing class homeworks and notes.
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+**ID**: API untuk mengelola tugas dan catatan kelas.
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+## Requirements
+1. Node.js
+2. NPM
+3. Adonis.js CLI
+3. XAMPP
+4. Postman
 
-## Setup
-
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick --api-only
-```
-
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
+## How to Use
+1. Clone this repository to your desired location.
+2. Create database `kelasan_sandbox` and configure it on `.env` file.
+3. Run migration `adonis migration:run`.
+4. Run server `adonis serve --dev`.
+5. Fire-up Postman.
+6. Do-what-you-want-with-it!
