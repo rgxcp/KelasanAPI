@@ -16,6 +16,13 @@
 const Route = use('Route')
 
 // Version 1
+// Class
+Route.group(() => {
+  Route.post('create', 'ClassController.create')
+    .middleware('auth')
+    .validator('CreateClass')
+}).prefix('api/v1/class')
+
 // User
 Route.group(() => {
   Route.post('sign-up', 'UserController.signUp').validator('SignUp')
