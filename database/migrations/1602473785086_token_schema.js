@@ -6,7 +6,12 @@ class TokenSchema extends Schema {
   up() {
     this.create('tokens', (table) => {
       table.increments('id')
-      table.integer('user_id').unsigned().notNullable()
+      table
+        .integer('user_id')
+        .unsigned()
+        .notNullable()
+        .references('id')
+        .inTable('users')
       table
         .string('token', 32)
         .unique()
