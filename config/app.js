@@ -13,7 +13,6 @@ module.exports = {
   | other location.
   |
   */
-
   name: Env.get('APP_NAME', 'AdonisJs'),
 
   /*
