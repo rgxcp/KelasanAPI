@@ -16,10 +16,10 @@
 const Route = use('Route')
 
 // Version 1
+// User
 Route.group(() => {
-  // User
   Route.post('sign-up', 'UserController.signUp').validator('SignUp')
   Route.post('sign-in', 'UserController.signIn').validator('SignIn')
   Route.delete('sign-out', 'UserController.signOut').middleware('auth')
   Route.delete('sign-out-all', 'UserController.signOutAll').middleware('auth')
-}).prefix('api/v1')
+}).prefix('api/v1/user')
