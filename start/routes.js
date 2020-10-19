@@ -16,12 +16,12 @@
 const Route = use('Route')
 
 // Version 1
-// Class
+// Classroom
 Route.group(() => {
-  Route.post('create', 'ClassController.create')
+  Route.post('create', 'ClassroomController.create')
     .middleware('auth')
-    .validator('CreateClass')
-}).prefix('api/v1/class')
+    .validator('CreateClassroom')
+}).prefix('api/v1/classroom')
 
 // User
 Route.group(() => {

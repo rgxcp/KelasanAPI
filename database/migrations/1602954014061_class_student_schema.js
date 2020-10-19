@@ -7,11 +7,11 @@ class ClassStudentSchema extends Schema {
     this.create('class_students', (table) => {
       table.increments('id')
       table
-        .integer('class_id')
+        .integer('classrooms_id')
         .unsigned()
         .notNullable()
         .references('id')
-        .inTable('classes')
+        .inTable('classrooms')
       table
         .integer('user_id')
         .unsigned()
