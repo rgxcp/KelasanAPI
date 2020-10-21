@@ -3,6 +3,9 @@
 
 **ID**: API untuk mengelola tugas dan catatan kelas.
 
+## Status
+DEVELOPING
+
 ## Requirements
 1. Node.js
 2. NPM
