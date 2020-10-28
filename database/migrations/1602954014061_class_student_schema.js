@@ -18,6 +18,11 @@ class ClassStudentSchema extends Schema {
         .notNullable()
         .references('id')
         .inTable('users')
+      table
+        .enu('role', ['LEADER', 'STUDENT'])
+        .notNullable()
+        .defaultTo('STUDENT')
+        .collate('utf8mb4_unicode_ci')
       table.timestamp('created_at').nullable()
       table.timestamp('updated_at').nullable()
     })
