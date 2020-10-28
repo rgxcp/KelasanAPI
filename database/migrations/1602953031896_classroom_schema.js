@@ -6,12 +6,6 @@ class ClassroomSchema extends Schema {
   up() {
     this.create('classrooms', (table) => {
       table.increments('id')
-      table
-        .integer('leader')
-        .unsigned()
-        .notNullable()
-        .references('id')
-        .inTable('users')
       table.string('name', 20).notNullable().collate('utf8mb4_unicode_ci')
       table
         .string('invitation_code', 11)
