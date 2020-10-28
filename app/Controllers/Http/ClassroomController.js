@@ -1,7 +1,7 @@
 'use strict'
 
 const Classroom = use('Classroom')
-const ClassStudent = use('ClassStudent')
+const ClassMember = use('ClassMember')
 
 class ClassroomController {
   async create({ request, auth }) {
@@ -10,7 +10,7 @@ class ClassroomController {
 
     const classroom = await Classroom.create(data)
 
-    await ClassStudent.create({
+    await ClassMember.create({
       classroom_id: classroom.id,
       user_id: classroom.leader
     })

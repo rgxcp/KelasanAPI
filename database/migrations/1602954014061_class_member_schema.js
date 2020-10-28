@@ -2,9 +2,9 @@
 
 const Schema = use('Schema')
 
-class ClassStudentSchema extends Schema {
+class ClassMemberSchema extends Schema {
   up() {
-    this.create('class_students', (table) => {
+    this.create('class_members', (table) => {
       table.increments('id')
       table
         .integer('classroom_id')
@@ -29,8 +29,8 @@ class ClassStudentSchema extends Schema {
   }
 
   down() {
-    this.drop('class_students')
+    this.drop('class_members')
   }
 }
 
-module.exports = ClassStudentSchema
+module.exports = ClassMemberSchema
