@@ -43,8 +43,18 @@ const aceProviders = ['@adonisjs/lucid/providers/MigrationsProvider']
 |
 */
 const aliases = {
-  Classroom: 'App/Models/Classroom',
+  Assignment: 'App/Models/Assignment',
+  AssignmentAttachment: 'App/Models/AssignmentAttachment',
+  AssignmentTimeline: 'App/Models/AssignmentTimeline',
   ClassMember: 'App/Models/ClassMember',
+  Classroom: 'App/Models/Classroom',
+  CompletedAssignment: 'App/Models/CompletedAssignment',
+  Folder: 'App/Models/Folder',
+  Note: 'App/Models/Note',
+  NoteAttachment: 'App/Models/NoteAttachment',
+  NoteTimeline: 'App/Models/NoteTimeline',
+  Subject: 'App/Models/Subject',
+  Token: 'App/Models/Token',
   User: 'App/Models/User'
 }
 
