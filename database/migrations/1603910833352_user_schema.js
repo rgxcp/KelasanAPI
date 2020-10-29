@@ -6,6 +6,7 @@ class UserSchema extends Schema {
   up() {
     this.create('users', (table) => {
       table.increments('id')
+      table.string('name', 20).notNullable().collate('utf8mb4_unicode_ci')
       table
         .string('email', 50)
         .unique()
