@@ -28,6 +28,12 @@ class UserController {
   async signOutAll({ auth }) {
     return await auth.revokeTokens()
   }
+
+  async update({ request, auth }) {
+    const data = await request.post()
+
+    return await User.query().where('id', auth.user.id).update(data)
+  }
 }
 
 module.exports = UserController
