@@ -16,7 +16,7 @@ class ClassroomController {
 
     await ClassMember.create({
       classroom_id: classroom.id,
-      user_id: auth.user.id,
+      user_id: await auth.user.id,
       role: classroom.role
     })
     return classroom

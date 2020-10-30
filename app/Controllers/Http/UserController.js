@@ -32,7 +32,9 @@ class UserController {
   async update({ request, auth }) {
     const data = await request.post()
 
-    return await User.query().where('id', auth.user.id).update(data)
+    return await User.query()
+      .where('id', await auth.user.id)
+      .update(data)
   }
 }
 
