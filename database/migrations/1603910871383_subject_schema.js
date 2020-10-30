@@ -15,6 +15,7 @@ class SubjectSchema extends Schema {
       table.string('name', 50).notNullable().collate('utf8mb4_unicode_ci')
       table.timestamp('created_at').nullable()
       table.timestamp('updated_at').nullable()
+      table.timestamp('deleted_at').nullable()
     })
   }
 

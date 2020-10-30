@@ -34,6 +34,7 @@ class AssignmentSchema extends Schema {
       table.datetime('deadline')
       table.timestamp('created_at').nullable()
       table.timestamp('updated_at').nullable()
+      table.timestamp('deleted_at').nullable()
     })
   }
 
