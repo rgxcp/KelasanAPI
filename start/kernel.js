@@ -36,8 +36,15 @@ const globalMiddleware = [
 const namedMiddleware = {
   auth: 'Adonis/Middleware/Auth',
   guest: 'Adonis/Middleware/AllowGuestOnly',
+  assignmentCompleted: 'App/Middleware/AssignmentCompleted',
+  assignmentExist: 'App/Middleware/AssignmentExist',
+  assignmentUncompleted: 'App/Middleware/AssignmentUncompleted',
   classLeader: 'App/Middleware/ClassLeader',
-  classMember: 'App/Middleware/ClassMember'
+  classMember: 'App/Middleware/ClassMember',
+  classroomExist: 'App/Middleware/ClassroomExist',
+  folderNotExist: 'App/Middleware/FolderNotExist',
+  notClassroomMember: 'App/Middleware/NotClassroomMember',
+  subjectNotExist: 'App/Middleware/SubjectNotExist'
 }
 
 /*
