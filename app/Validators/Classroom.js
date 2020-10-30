@@ -2,7 +2,13 @@
 
 class Classroom {
   get rules() {
-    return {}
+    return {
+      name: 'required|string|max:20'
+    }
+  }
+
+  get validateAll() {
+    return true
   }
 }
 
