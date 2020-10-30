@@ -8,7 +8,7 @@ class ClassroomSchema extends Schema {
       table.increments('id')
       table.string('name', 20).notNullable().collate('utf8mb4_unicode_ci')
       table
-        .string('invitation_code', 11)
+        .string('invitation_code', 12)
         .unique()
         .index()
         .notNullable()
