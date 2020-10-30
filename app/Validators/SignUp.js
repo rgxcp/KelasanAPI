@@ -3,8 +3,9 @@
 class SignUp {
   get rules() {
     return {
-      email: 'required|max:50|email|unique:users,email',
-      password: 'required|min:8|different:email'
+      name: 'required|string|max:20',
+      email: 'required|email|max:50|unique:users,email',
+      password: 'required|string|min:8|different:email'
     }
   }
 
