@@ -65,7 +65,6 @@ Route.group(() => {
 // Assignment
 Route.group(() => {
   Route.get(':id', 'AssignmentController.detail').middleware('classMember')
-  Route.get('all', 'AssignmentController.all').middleware('classMember')
   Route.get('today', 'AssignmentController.today').middleware('classMember')
   Route.get('tomorrow', 'AssignmentController.tomorrow').middleware('classMember')
   Route.get('next-week', 'AssignmentController.nextWeek').middleware('classMember')
