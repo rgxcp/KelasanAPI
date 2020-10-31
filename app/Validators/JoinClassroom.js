@@ -2,7 +2,13 @@
 
 class JoinClassroom {
   get rules() {
-    return {}
+    return {
+      invitation_code: 'required|string|min:12|max:12'
+    }
+  }
+
+  get validateAll() {
+    return true
   }
 }
 

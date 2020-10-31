@@ -1,5 +1,19 @@
 'use strict'
 
-class SubjectController {}
+class SubjectController {
+  async detail() {}
+
+  async assignment() {}
+
+  async completedAssignment() {}
+
+  async uncompletedAssignment() {}
+
+  async create() {}
+
+  async rename() {}
+
+  async delete() {}
+}
 
 module.exports = SubjectController

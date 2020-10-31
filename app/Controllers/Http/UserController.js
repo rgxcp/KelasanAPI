@@ -3,6 +3,18 @@
 const User = use('User')
 
 class UserController {
+  async profile() {}
+
+  async classroom() {}
+
+  async subject() {}
+
+  async assignment() {}
+
+  async completedAssignment() {}
+
+  async uncompletedAssignment() {}
+
   async signUp({ request, auth }) {
     const data = await request.post()
     data.profile_picture = `https://ui-avatars.com/api/?name=${data.email}`

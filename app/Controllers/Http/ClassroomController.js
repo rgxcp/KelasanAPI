@@ -5,6 +5,24 @@ const ClassMember = use('ClassMember')
 const Classroom = use('Classroom')
 
 class ClassroomController {
+  async detail() {}
+
+  async invitationCode() {}
+
+  async member() {}
+
+  async folder() {}
+
+  async subject() {}
+
+  async assignment() {}
+
+  async completedAssignment() {}
+
+  async uncompletedAssignment() {}
+
+  async note() {}
+
   async create({ request, auth }) {
     const code = randomBytes(5).toString('hex')
 
@@ -21,6 +39,12 @@ class ClassroomController {
     })
     return classroom
   }
+
+  async join() {}
+
+  async rename() {}
+
+  async delete() {}
 }
 
 module.exports = ClassroomController
