@@ -15,14 +15,17 @@ class UserController {
 
   async uncompletedAssignment() {}
 
-  async signUp({ request, auth }) {
-    const data = await request.post()
-    data.profile_picture = `https://ui-avatars.com/api/?name=${data.email}`
+  async signUp({ request, response, auth }) {
+    const data = request.post()
+    data.profile_picture = `https://ui-avatars.com/api/?name=${data.name}`
 
     const user = await User.create(data)
     user.token = await auth.generate(user)
 
-    return user
+    return response.status(201).json({
+      message: 'Created',
+      result: user
+    })
   }
 
   async signIn({ request, auth }) {
