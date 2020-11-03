@@ -39,10 +39,14 @@ class UserController {
     })
   }
 
-  async signOut({ auth }) {
-    const token = await auth.getAuthHeader()
+  async signOut({ response, auth }) {
+    const token = auth.getAuthHeader()
 
-    return await auth.revokeTokens(token)
+    await auth.revokeTokens(token)
+
+    return response.status(200).json({
+      message: 'Success'
+    })
   }
 
   async signOutAll({ auth }) {
