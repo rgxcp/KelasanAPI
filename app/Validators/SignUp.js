@@ -9,6 +9,18 @@ class SignUp {
     }
   }
 
+  get messages() {
+    return {
+      different: 'Kata sandi harus berbeda dengan email.',
+      email: 'Format email tidak sesuai.',
+      max: 'Maksimal {{ agument.0 }} karakter.',
+      min: 'Minimal {{ argument.0 }} karakter.',
+      required: 'Input tersebut harus diisi.',
+      string: 'Input harus berupa karakter.',
+      unique: 'Email tersebut sudah digunakan.'
+    }
+  }
+
   get validateAll() {
     return true
   }
