@@ -28,10 +28,15 @@ class UserController {
     })
   }
 
-  async signIn({ request, auth }) {
-    const { email, password } = await request.post()
+  async signIn({ request, response, auth }) {
+    const { email, password } = request.post()
 
-    return await auth.attempt(email, password)
+    const token = await auth.attempt(email, password)
+
+    return response.status(201).json({
+      message: 'Authenticated',
+      result: token
+    })
   }
 
   async signOut({ auth }) {
