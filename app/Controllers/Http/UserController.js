@@ -3,7 +3,14 @@
 const User = use('User')
 
 class UserController {
-  async profile() {}
+  async profile({ response, auth }) {
+    const user = await auth.getUser()
+
+    return response.status(200).json({
+      message: 'Success',
+      result: user
+    })
+  }
 
   async classroom() {}
 
