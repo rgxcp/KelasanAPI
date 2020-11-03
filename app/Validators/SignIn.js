@@ -8,6 +8,14 @@ class SignIn {
     }
   }
 
+  get messages() {
+    return {
+      email: 'Format email tidak sesuai.',
+      required: 'Input tersebut harus diisi.',
+      string: 'Input harus berupa karakter.'
+    }
+  }
+
   get validateAll() {
     return true
   }
