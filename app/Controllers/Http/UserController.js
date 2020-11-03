@@ -49,8 +49,12 @@ class UserController {
     })
   }
 
-  async signOutAll({ auth }) {
-    return await auth.revokeTokens()
+  async signOutAll({ response, auth }) {
+    await auth.revokeTokens()
+
+    return response.status(200).json({
+      message: 'Success'
+    })
   }
 
   async update({ request, auth }) {
