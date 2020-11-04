@@ -43,7 +43,7 @@ const namedMiddleware = {
   classMember: 'App/Middleware/ClassMember',
   classroomExist: 'App/Middleware/ClassroomExist',
   folderNotExist: 'App/Middleware/FolderNotExist',
-  notClassroomMember: 'App/Middleware/NotClassroomMember',
+  notClassMember: 'App/Middleware/NotClassMember',
   subjectNotExist: 'App/Middleware/SubjectNotExist'
 }
 

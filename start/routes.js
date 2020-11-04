@@ -70,7 +70,7 @@ Route.group(() => {
   Route.post('create', 'ClassroomController.create')
     .validator('Classroom')
   Route.post('join', 'ClassroomController.join')
-    .middleware(['classroomExist', 'notClassroomMember'])
+    .middleware(['classroomExist', 'notClassMember'])
     .validator('JoinClassroom')
   Route.put(':id/rename', 'ClassroomController.rename')
     .middleware('classMember')
