@@ -41,7 +41,7 @@ Route.group(() => {
     .middleware('classroomMember')
     .validator('Assignment')
   Route.delete(':id/delete', 'AssignmentController.delete')
-    .middleware('classLeader')
+    .middleware('classroomLeader')
   Route.delete(':id/mark-as-uncompleted', 'AssignmentController.markAsUncompleted')
     .middleware(['assignmentExist', 'assignmentCompleted'])
 }).prefix('api/v1/assignment')
@@ -52,7 +52,7 @@ Route.group(() => {
   Route.get(':id', 'ClassroomController.detail')
     .middleware('classroomMember')
   Route.get(':id/invitation-code', 'ClassroomController.invitationCode')
-    .middleware('classLeader')
+    .middleware('classroomLeader')
   Route.get(':id/member', 'ClassroomController.member')
     .middleware('classroomMember')
   Route.get(':id/folder', 'ClassroomController.folder')
@@ -76,7 +76,7 @@ Route.group(() => {
     .middleware('classroomMember')
     .validator('Classroom')
   Route.delete(':id/delete', 'ClassroomController.delete')
-    .middleware('classLeader')
+    .middleware('classroomLeader')
 }).prefix('api/v1/classroom')
   .middleware('auth')
 
@@ -99,7 +99,7 @@ Route.group(() => {
     .middleware('classroomMember')
     .validator('Folder')
   Route.delete(':id/delete', 'FolderController.delete')
-    .middleware('classLeader')
+    .middleware('classroomLeader')
 }).prefix('api/v1/folder')
   .middleware('auth')
 
@@ -116,7 +116,7 @@ Route.group(() => {
     .middleware('classroomMember')
     .validator('Note')
   Route.delete(':id/delete', 'NoteController.delete')
-    .middleware('classLeader')
+    .middleware('classroomLeader')
 }).prefix('api/v1/note')
   .middleware('auth')
 
@@ -149,7 +149,7 @@ Route.group(() => {
     .middleware('classroomMember')
     .validator('Subject')
   Route.delete(':id/delete', 'SubjectController.delete')
-    .middleware('classLeader')
+    .middleware('classroomLeader')
 }).prefix('api/v1/subject')
   .middleware('auth')
 
