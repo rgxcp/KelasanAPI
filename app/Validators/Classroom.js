@@ -9,7 +9,7 @@ class Classroom {
 
   get messages() {
     return {
-      max: 'Maksimal {{ agument.0 }} karakter.',
+      max: 'Maksimal {{ argument.0 }} karakter.',
       required: 'Input tersebut harus diisi.',
       string: 'Input harus berupa karakter.'
     }

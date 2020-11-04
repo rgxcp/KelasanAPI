@@ -13,7 +13,7 @@ class SignUp {
     return {
       different: 'Kata sandi harus berbeda dengan email.',
       email: 'Format email tidak sesuai.',
-      max: 'Maksimal {{ agument.0 }} karakter.',
+      max: 'Maksimal {{ argument.0 }} karakter.',
       min: 'Minimal {{ argument.0 }} karakter.',
       required: 'Input tersebut harus diisi.',
       string: 'Input harus berupa karakter.',
