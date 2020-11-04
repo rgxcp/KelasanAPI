@@ -23,21 +23,25 @@ class ClassroomController {
 
   async note() {}
 
-  async create({ request, auth }) {
+  async create({ request, response, auth }) {
     const code = randomBytes(5).toString('hex')
 
-    const data = await request.post()
+    const data = request.post()
     data.invitation_code = `${code.substr(0, 3)}-${code.substr(3, 4)}-${code.substr(7, 3)}`
 
     const classroom = await Classroom.create(data)
-    classroom.role = 'LEADER'
 
+    const userId = await auth.user.id
     await ClassMember.create({
       classroom_id: classroom.id,
-      user_id: await auth.user.id,
-      role: classroom.role
+      user_id: userId,
+      role: 'LEADER'
     })
-    return classroom
+
+    return response.status(201).json({
+      message: 'Created',
+      result: classroom
+    })
   }
 
   async join() {}
