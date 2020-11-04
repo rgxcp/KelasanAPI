@@ -40,7 +40,7 @@ const namedMiddleware = {
   assignmentExist: 'App/Middleware/AssignmentExist',
   assignmentUncompleted: 'App/Middleware/AssignmentUncompleted',
   classLeader: 'App/Middleware/ClassLeader',
-  classMember: 'App/Middleware/ClassMember',
+  classroomMember: 'App/Middleware/ClassroomMember',
   classroomExist: 'App/Middleware/ClassroomExist',
   folderNotExist: 'App/Middleware/FolderNotExist',
   notClassMember: 'App/Middleware/NotClassMember',

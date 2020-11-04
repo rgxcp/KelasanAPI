@@ -1,9 +1,9 @@
 'use strict'
 
-class ClassMember {
+class ClassroomMember {
   async handle({ request }, next) {
     await next()
   }
 }
 
-module.exports = ClassMember
+module.exports = ClassroomMember
