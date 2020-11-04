@@ -2,7 +2,7 @@
 
 const ClassMember = use('ClassMember')
 
-class NotClassMember {
+class NotClassroomMember {
   async handle({ request, response, auth }, next) {
     const { classroom_id } = request.post()
 
@@ -25,4 +25,4 @@ class NotClassMember {
   }
 }
 
-module.exports = NotClassMember
+module.exports = NotClassroomMember
