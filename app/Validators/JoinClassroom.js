@@ -7,6 +7,15 @@ class JoinClassroom {
     }
   }
 
+  get messages() {
+    return {
+      max: 'Maksimal {{ argument.0 }} karakter.',
+      min: 'Minimal {{ argument.0 }} karakter.',
+      required: 'Input tersebut harus diisi.',
+      string: 'Input harus berupa karakter.'
+    }
+  }
+
   get validateAll() {
     return true
   }
