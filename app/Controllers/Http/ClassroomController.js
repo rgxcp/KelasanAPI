@@ -44,7 +44,18 @@ class ClassroomController {
     })
   }
 
-  async join() {}
+  async join({ request, response }) {
+    const { classroom_id, user_id } = request.post()
+
+    await ClassMember.create({
+      classroom_id: classroom_id,
+      user_id: user_id
+    })
+
+    return response.status(201).json({
+      message: 'Joined'
+    })
+  }
 
   async rename() {}
 
