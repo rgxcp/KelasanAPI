@@ -57,7 +57,15 @@ class ClassroomController {
     })
   }
 
-  async rename() {}
+  async rename({ params: { id }, request, response }) {
+    const data = request.post()
+
+    await Classroom.query().where('id', id).update(data)
+
+    return response.status(200).json({
+      message: 'Success'
+    })
+  }
 
   async delete() {}
 }
