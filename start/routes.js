@@ -173,7 +173,5 @@ Route.group(() => {
   Route.get('assignment', 'UserController.assignment')
   Route.get('completed-assignment', 'UserController.completedAssignment')
   Route.get('uncompleted-assignment', 'UserController.uncompletedAssignment')
-  Route.put('update', 'UserController.update')
-    .validator('SignUp')
 }).prefix('api/v1/user/self')
   .middleware('auth')

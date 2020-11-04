@@ -63,17 +63,6 @@ class UserController {
       message: 'Success'
     })
   }
-
-  async update({ request, response, auth }) {
-    const data = request.post()
-
-    const id = await auth.user.id
-    await User.query().where('id', id).update(data)
-
-    return response.status(200).json({
-      message: 'Success'
-    })
-  }
 }
 
 module.exports = UserController
