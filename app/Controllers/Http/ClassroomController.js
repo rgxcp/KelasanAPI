@@ -67,7 +67,15 @@ class ClassroomController {
     })
   }
 
-  async delete() {}
+  async delete({ params: { id }, response }) {
+    const classroom = await Classroom.find(id)
+
+    await classroom.delete()
+
+    return response.status(200).json({
+      message: 'Success'
+    })
+  }
 }
 
 module.exports = ClassroomController
