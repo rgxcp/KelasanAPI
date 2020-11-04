@@ -12,6 +12,7 @@ class ClassMemberSchema extends Schema {
         .notNullable()
         .references('id')
         .inTable('classrooms')
+        .onDelete('CASCADE')
       table
         .integer('user_id')
         .unsigned()
