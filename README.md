@@ -4,7 +4,7 @@
 **ID**: API untuk mengelola tugas dan catatan kelas.
 
 ## Status
-DEVELOPING
+ABANDONED
 
 ## Requirements
 1. Node.js
